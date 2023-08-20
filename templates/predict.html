@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Prediction</title>
+
+<style> 
+.cropped {
+     width: {{data[11]}}px;
+     height: {{data[11]}}px;
+     ;
+	 object-fit: cover;
+     object-position: {{data[9]}}% {{data[10]}}%;
+     border: 4px solid black;
+}
+</style> 
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+<br><br>
+
+
+<img  class="cropped" src={{img}} width={{data[1]}} height={{data[2]}}>
+
+
+
+
+<br>
+ <h2 style="text-align: left">Predictions</h2>
+<ol>
+  <li> {{data[3]}} = {{data[4]}} %</li>
+    <li> {{data[5]}} = {{data[6]}} %</li>
+	  <li> {{data[7]}} = {{data[8]}} %</li>
+</ol> 
+
+<a title="Predict Again" href="/ "> Predict Again </a>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Cifar10</title>
+
+<script>
+function validateForm() {
+  var x = document.forms["pred"]["Upload Image"].value;
+  var y = document.forms["pred"]["content"].value;
+  if ({y ==  null} || {x == null}) {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Cifar10 CNN Predictor</h1>
+
+    <div class="form">
+        <form name="pred" action="/predict.html"  enctype="multipart/form-data" 
+		onsubmit="return validateForm()" method="POST" >
+		          
+			<br>
+			<input type="file" name="Upload Image" id="content" 
+			accept="image/png, image/jpeg" />
+			<br><br>
+			
+			 <input type="url" title="Enter Image URL" name="content" id="content"
+			placeholder="Paste Image URL" >
+	         <br><br>
+            <input  type="submit" value="Predict!">
+			
+        </form>
+    
+    </div>
+	<br><br>
+	<img src="{{url_for('static',filename='/Image/cats face.jpg')}}", height="300", width="300">
+	
+
+<!--&<iframe src="/predict.html" style="height:200px;width:300px;" title="description">&</iframe> -->
+	
+	
+</div>
+
+{% endblock %}

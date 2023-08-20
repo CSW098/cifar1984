@@ -1,6 +1,6 @@
 # cifar1984
-cifar1984 is a custom cifar10 model designed to deploy using Flask and PyTorch. Calculates the likelihood an object in an image to be either three classes of the following: 'Plane','Car', 
-'Bird ','Cat ','Deer ','Dog ', 'Frog ', 'Horse', 'Ship','Truck'.
+cifar1984 is a custom cifar10 model designed using Flask and PyTorch. cifar1984 calculates the likelihood an object in a given image to be either threethe following object classes: 'Plane', 'Car', 
+'Bird ', 'Cat ', 'Deer ', 'Dog ', 'Frog ', 'Horse', 'Ship', 'Truck'.
 
 Mock up live-webpage with in production predictor turned off: http://ccsw.pythonanywhere.com/
 

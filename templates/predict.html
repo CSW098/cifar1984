@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block head %}
-<title>Prediction</title>
+<title>Classification</title>
 
 <style> 
 .cropped {
@@ -26,13 +26,13 @@
 
 
 <br>
- <h2 style="text-align: left">Predictions</h2>
+ <h2 style="text-align: left">Classifications</h2>
 <ol>
   <li> {{data[3]}} = {{data[4]}} %</li>
     <li> {{data[5]}} = {{data[6]}} %</li>
 	  <li> {{data[7]}} = {{data[8]}} %</li>
 </ol> 
 
-<a title="Predict Again" href="/ "> Predict Again </a>
+<a title="Predict Again" href="/ "> Classify Again </a>
 </div>
 {% endblock %}
